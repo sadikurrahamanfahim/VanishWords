@@ -39,4 +39,8 @@ public class PrintScript : MonoBehaviour
             }
         }
     }
+    public void Quit()
+    {
+        Application.Quit();
+    }
 }
