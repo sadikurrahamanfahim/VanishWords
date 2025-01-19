@@ -38,7 +38,19 @@ public class PrintScript : MonoBehaviour
                 SceneManager.LoadScene("MainGame");
             }
         }
+        else
+        {
+            tmp.color = Color.red;
+            StartCoroutine(ResetTextColorAfterDelay(tmp, 1f));
+        }
     }
+
+    private System.Collections.IEnumerator ResetTextColorAfterDelay(TMP_Text tmp, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        tmp.color = Color.black;
+    }
+
     public void Quit()
     {
         Application.Quit();
