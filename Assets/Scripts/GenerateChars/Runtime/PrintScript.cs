@@ -4,6 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using System.Collections;
 
 public class PrintScript : MonoBehaviour
 {
@@ -45,7 +46,7 @@ public class PrintScript : MonoBehaviour
         }
     }
 
-    private System.Collections.IEnumerator ResetTextColorAfterDelay(TMP_Text tmp, float delay)
+    private IEnumerator ResetTextColorAfterDelay(TMP_Text tmp, float delay)
     {
         yield return new WaitForSeconds(delay);
         tmp.color = Color.black;
